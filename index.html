@@ -253,7 +253,22 @@
         0 11px 25px rgba(78, 42, 103, 0.12),
         inset 0 1px 0 rgba(255, 255, 255, 0.8);
     }
+.novel-cover {
+  display: block;
+  width: 190px;
+  height: 200px;
+  border-right: 1px solid var(--border-lavender);
+  object-fit: cover;
+  object-position: center;
+}
 
+.alternative-title {
+  margin: -2px 0 10px;
+  color: #765d83;
+  font-size: 0.92rem;
+  font-style: italic;
+  line-height: 1.35;
+}
     .cover-placeholder {
       position: relative;
       display: flex;
@@ -481,7 +496,10 @@
       body {
         font-size: 16px;
       }
-
+.novel-cover {
+  width: 130px;
+  height: 175px;
+}
       .site-nav {
         gap: 25px;
         min-height: 58px;
@@ -535,6 +553,12 @@
     }
 
     @media (max-width: 420px) {
+
+    .novel-cover {
+        width: 110px;
+        height: 155px;
+    }
+
       .site-nav {
         gap: 18px;
       }
@@ -593,30 +617,32 @@
       <div class="projects-grid">
 
         <article class="project-card">
-          <div
-            class="cover-placeholder"
-            role="img"
-            aria-label="Placeholder for the first novel cover"
-          >
-            NOVEL<br>COVER
-          </div>
+  <img
+    class="novel-cover"
+    src="jiaguojiu.png"
+    alt="Cover of Jia Guo Jiu — Marrying the Imperial Uncle"
+  >
 
-          <div class="project-content">
-            <h3>First Novel Title</h3>
+  <div class="project-content">
+    <h3>Jia Guo Jiu</h3>
 
-            <div class="small-ornament">
-              <span>✦</span>
-            </div>
+    <p class="alternative-title">
+      Marrying the Imperial Uncle
+    </p>
 
-            <div class="project-actions">
-              <span class="status">Coming Soon</span>
+    <div class="small-ornament">
+      <span>✦</span>
+    </div>
 
-              <a class="read-button" href="#">
-                Read Here →
-              </a>
-            </div>
-          </div>
-        </article>
+    <div class="project-actions">
+      <span class="status">Ongoing</span>
+
+      <a class="read-button" href="jiaguojiu.html">
+        Read Here →
+      </a>
+    </div>
+  </div>
+</article>
 
         <article class="project-card">
           <div
