@@ -16,12 +16,17 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
+      background: #fbf9fd;
+      color: #39333f;
       font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.7;
-      background: #f8f5fc;
-      color: #332f3a;
+      font-size: 17px;
+      line-height: 1.75;
     }
 
     a {
@@ -29,127 +34,167 @@
     }
 
     .hero {
-      min-height: 270px;
+      min-height: 330px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 40px 20px;
+      padding: 50px 20px;
       text-align: center;
+      color: white;
+
       background:
         linear-gradient(
-          rgba(54, 39, 72, 0.48),
-          rgba(54, 39, 72, 0.48)
+          rgba(73, 53, 92, 0.52),
+          rgba(73, 53, 92, 0.52)
         ),
-        url("banner.jpg") center / cover no-repeat;
-      color: white;
+        linear-gradient(
+          135deg,
+          #cbb7df,
+          #8d70a9,
+          #59436f
+        );
     }
 
     .hero h1 {
       margin: 0;
-      font-size: clamp(2.2rem, 6vw, 4rem);
-      letter-spacing: 4px;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+      font-size: clamp(2.8rem, 8vw, 5rem);
+      font-weight: normal;
+      letter-spacing: 7px;
+      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
     }
 
     .hero p {
-      margin: 10px 0 0;
+      margin: 12px 0 0;
       font-size: 1.05rem;
+      letter-spacing: 1px;
+    }
+
+    .site-nav {
+      padding: 14px 20px;
+      border-bottom: 1px solid #ded3e8;
+      background: #f2ecf7;
+      text-align: center;
+    }
+
+    .site-nav a {
+      margin: 0 14px;
+      color: #554263;
+      font-family: Arial, sans-serif;
+      font-size: 0.95rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .site-nav a:hover {
+      text-decoration: underline;
     }
 
     main {
-      width: min(100% - 32px, 960px);
+      width: min(100% - 34px, 960px);
       margin: 0 auto;
-      padding: 42px 0;
+      padding: 55px 0;
     }
 
     section {
-      margin-bottom: 46px;
+      margin-bottom: 58px;
     }
 
     h2 {
-      margin-top: 0;
-      color: #4f3e68;
+      margin: 0 0 18px;
+      color: #503d62;
       font-family: Arial, sans-serif;
+      font-size: 1.6rem;
     }
 
     .intro {
-      max-width: 760px;
+      max-width: 780px;
+    }
+
+    .intro p {
+      margin: 0 0 16px;
     }
 
     .projects {
       display: grid;
       grid-template-columns:
-        repeat(auto-fit, minmax(230px, 1fr));
-      gap: 24px;
+        repeat(auto-fit, minmax(250px, 1fr));
+      gap: 28px;
     }
 
     .card {
       overflow: hidden;
-      background: #eee7f7;
-      border: 1px solid #d7c9e8;
-      border-left: 5px solid #8064a2;
-      border-radius: 14px;
-      box-shadow: 0 4px 14px rgba(77, 54, 100, 0.08);
+      border: 1px solid #d9cce6;
+      border-left: 5px solid #8a6aa8;
+      border-radius: 15px;
+      background: #f0eaf6;
+      box-shadow: 0 6px 18px rgba(75, 52, 91, 0.09);
     }
 
-    .card img {
-      display: block;
-      width: 100%;
-      height: 340px;
-      object-fit: cover;
-      background: #ddd4e7;
+    .cover-placeholder {
+      height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 25px;
+      background:
+        linear-gradient(
+          145deg,
+          #d9cbe7,
+          #bba5d1
+        );
+      color: #5c486b;
+      text-align: center;
+      font-style: italic;
     }
 
     .card-content {
-      padding: 18px;
+      padding: 20px;
     }
 
     .card h3 {
-      margin: 0 0 14px;
+      margin: 0 0 16px;
+      color: #352c3b;
       font-family: Arial, sans-serif;
       font-size: 1.15rem;
-      line-height: 1.4;
+      line-height: 1.45;
     }
 
     .card-actions {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 11px;
     }
 
     .status {
-      display: inline-block;
-      padding: 5px 11px;
-      border: 1px solid #c7b7da;
+      padding: 5px 12px;
+      border: 1px solid #cbbbd9;
       border-radius: 999px;
-      background: #f9f7fc;
+      background: #fbf9fd;
       font-size: 0.84rem;
     }
 
     .button {
-      display: inline-block;
-      padding: 8px 15px;
+      padding: 8px 16px;
       border-radius: 7px;
-      background: #4e3b63;
+      background: #4e3a60;
       color: white;
-      text-decoration: none;
       font-family: Arial, sans-serif;
       font-size: 0.9rem;
+      text-decoration: none;
     }
 
-    .button:hover,
-    .button:focus {
-      background: #352744;
+    .button:hover {
+      background: #352640;
       text-decoration: underline;
     }
 
     footer {
-      padding: 36px 20px;
-      border-top: 1px solid #d9cfe5;
+      padding: 42px 20px;
+      border-top: 1px solid #ded3e8;
+      background: #f2ecf7;
+      color: #675d6e;
       text-align: center;
-      background: #f1ecf7;
-      color: #665d70;
       font-size: 0.92rem;
     }
 
@@ -158,17 +203,25 @@
     }
 
     @media (max-width: 600px) {
+      body {
+        font-size: 16px;
+      }
+
       .hero {
-        min-height: 220px;
+        min-height: 255px;
+      }
+
+      .hero h1 {
+        letter-spacing: 4px;
       }
 
       main {
         width: min(100% - 24px, 960px);
-        padding-top: 30px;
+        padding: 38px 0;
       }
 
-      .card img {
-        height: 300px;
+      .cover-placeholder {
+        height: 310px;
       }
     }
   </style>
@@ -183,9 +236,14 @@
     </div>
   </header>
 
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+  </nav>
+
   <main>
 
-    <section class="intro">
+    <section class="intro" id="home">
       <h2>Home</h2>
 
       <p>
@@ -193,21 +251,25 @@
       </p>
 
       <p>
-        I translate Chinese novels as a hobby. These translations
-        are shared for readers who enjoy historical, romantic,
-        fantasy, and drama-adapted stories.
+        I translate Chinese novels as a hobby, especially historical,
+        romantic, fantasy, and drama-adapted stories.
+      </p>
+
+      <p>
+        These unofficial translations are shared for fellow readers.
+        Please support the original authors and publishers whenever possible.
       </p>
     </section>
 
-    <section>
+    <section id="projects">
       <h2>Projects</h2>
 
       <div class="projects">
 
         <article class="card">
-          <img
-            src="novel-cover-1.jpg"
-            alt="Cover of the first Sengtopia novel">
+          <div class="cover-placeholder">
+            Your first novel cover will appear here
+          </div>
 
           <div class="card-content">
             <h3>First Novel Title</h3>
@@ -223,9 +285,9 @@
         </article>
 
         <article class="card">
-          <img
-            src="novel-cover-2.jpg"
-            alt="Cover of the second Sengtopia novel">
+          <div class="cover-placeholder">
+            Your second novel cover will appear here
+          </div>
 
           <div class="card-content">
             <h3>Second Novel Title</h3>
@@ -247,17 +309,13 @@
 
   <footer>
     <p>Questions, feedback, or spotted a typo?</p>
-
     <p>Contact information coming soon.</p>
 
     <p>
-      © 2026 Sengtopia. Unofficial fan translations
-      shared for hobby purposes only.
+      © 2026 Sengtopia. Unofficial fan translations shared for hobby purposes only.
     </p>
 
-    <p>
-      Please support the original authors and publishers.
-    </p>
+    <p>Please support the original authors and publishers.</p>
   </footer>
 
 </body>
