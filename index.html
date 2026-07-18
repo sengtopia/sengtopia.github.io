@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="description"
         content="Sengtopia — a personal Chinese novel translation archive.">
@@ -23,55 +21,30 @@
     body {
       margin: 0;
       background: #fbf9fd;
-      color: #39333f;
+      color: #3e3744;
       font-family: Georgia, "Times New Roman", serif;
       font-size: 17px;
       line-height: 1.75;
     }
 
-    a {
-      color: inherit;
-    }
-
-    .hero {
-      width: 100%
-      aspect-ratio: 2 / 1;
-      min-height: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-      text-align: center;
-      color: white;
-
-      background: url("banner.png") center / contain no-repeat;
-      background-color: #eee7f7;
-    }
-
-    .hero h1 {
-      margin: 0;
-      font-size: clamp(2.8rem, 8vw, 5rem);
-      font-weight: normal;
-      letter-spacing: 7px;
-      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
-    }
-
-    .hero p {
-      margin: 12px 0 0;
-      font-size: 1.05rem;
-      letter-spacing: 1px;
+    /* Displays the complete banner without cropping */
+    .banner {
+      display: block;
+      width: 100%;
+      height: auto;
     }
 
     .site-nav {
-      padding: 14px 20px;
+      padding: 15px 20px;
+      border-top: 1px solid #ded3e8;
       border-bottom: 1px solid #ded3e8;
       background: #f2ecf7;
       text-align: center;
     }
 
     .site-nav a {
-      margin: 0 14px;
-      color: #554263;
+      margin: 0 16px;
+      color: #594769;
       font-family: Arial, sans-serif;
       font-size: 0.95rem;
       font-weight: bold;
@@ -85,7 +58,7 @@
     main {
       width: min(100% - 34px, 960px);
       margin: 0 auto;
-      padding: 55px 0;
+      padding: 52px 0;
     }
 
     section {
@@ -94,9 +67,9 @@
 
     h2 {
       margin: 0 0 18px;
-      color: #503d62;
+      color: #554066;
       font-family: Arial, sans-serif;
-      font-size: 1.6rem;
+      font-size: 1.55rem;
     }
 
     .intro {
@@ -116,11 +89,11 @@
 
     .card {
       overflow: hidden;
-      border: 1px solid #d9cce6;
-      border-left: 5px solid #8a6aa8;
+      border: 1px solid #d8cbe5;
+      border-left: 5px solid #8b6da8;
       border-radius: 15px;
       background: #f0eaf6;
-      box-shadow: 0 6px 18px rgba(75, 52, 91, 0.09);
+      box-shadow: 0 6px 18px rgba(75, 52, 91, 0.10);
     }
 
     .cover-placeholder {
@@ -129,13 +102,8 @@
       align-items: center;
       justify-content: center;
       padding: 25px;
-      background:
-        linear-gradient(
-          145deg,
-          #d9cbe7,
-          #bba5d1
-        );
-      color: #5c486b;
+      background: linear-gradient(145deg, #ddd1e9, #baa4cf);
+      color: #5c496b;
       text-align: center;
       font-style: italic;
     }
@@ -146,7 +114,7 @@
 
     .card h3 {
       margin: 0 0 16px;
-      color: #352c3b;
+      color: #382f3e;
       font-family: Arial, sans-serif;
       font-size: 1.15rem;
       line-height: 1.45;
@@ -168,9 +136,10 @@
     }
 
     .button {
+      display: inline-block;
       padding: 8px 16px;
       border-radius: 7px;
-      background: #4e3a60;
+      background: #533d65;
       color: white;
       font-family: Arial, sans-serif;
       font-size: 0.9rem;
@@ -178,7 +147,7 @@
     }
 
     .button:hover {
-      background: #352640;
+      background: #382843;
       text-decoration: underline;
     }
 
@@ -200,17 +169,13 @@
         font-size: 16px;
       }
 
-      .hero {
-        min-height: 255px;
-      }
-
-      .hero h1 {
-        letter-spacing: 4px;
-      }
-
       main {
         width: min(100% - 24px, 960px);
         padding: 38px 0;
+      }
+
+      .site-nav a {
+        margin: 0 10px;
       }
 
       .cover-placeholder {
@@ -222,9 +187,11 @@
 
 <body>
 
-  <header class="hero">
-    <div>
-    </div>
+  <header>
+    <img
+      class="banner"
+      src="banner.png"
+      alt="Sengtopia — a small archive of translated stories">
   </header>
 
   <nav class="site-nav" aria-label="Main navigation">
