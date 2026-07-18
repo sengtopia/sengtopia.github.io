@@ -2,71 +2,263 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Sengtopia — a personal Chinese novel translation archive.">
+
   <title>Sengtopia</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-      line-height: 1.8;
-      background: #fafafa;
-      color: #333;
-    }
-
-    h1 {
-      text-align: center;
-      color: #6b46c1;
-    }
-
-    h2 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 8px;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+      background: #f8f5fc;
+      color: #332f3a;
     }
 
     a {
-      color: #6b46c1;
-      text-decoration: none;
+      color: inherit;
     }
 
-    a:hover {
+    .hero {
+      min-height: 270px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      text-align: center;
+      background:
+        linear-gradient(
+          rgba(54, 39, 72, 0.48),
+          rgba(54, 39, 72, 0.48)
+        ),
+        url("banner.jpg") center / cover no-repeat;
+      color: white;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      letter-spacing: 4px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero p {
+      margin: 10px 0 0;
+      font-size: 1.05rem;
+    }
+
+    main {
+      width: min(100% - 32px, 960px);
+      margin: 0 auto;
+      padding: 42px 0;
+    }
+
+    section {
+      margin-bottom: 46px;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #4f3e68;
+      font-family: Arial, sans-serif;
+    }
+
+    .intro {
+      max-width: 760px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      overflow: hidden;
+      background: #eee7f7;
+      border: 1px solid #d7c9e8;
+      border-left: 5px solid #8064a2;
+      border-radius: 14px;
+      box-shadow: 0 4px 14px rgba(77, 54, 100, 0.08);
+    }
+
+    .card img {
+      display: block;
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      background: #ddd4e7;
+    }
+
+    .card-content {
+      padding: 18px;
+    }
+
+    .card h3 {
+      margin: 0 0 14px;
+      font-family: Arial, sans-serif;
+      font-size: 1.15rem;
+      line-height: 1.4;
+    }
+
+    .card-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .status {
+      display: inline-block;
+      padding: 5px 11px;
+      border: 1px solid #c7b7da;
+      border-radius: 999px;
+      background: #f9f7fc;
+      font-size: 0.84rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 8px 15px;
+      border-radius: 7px;
+      background: #4e3b63;
+      color: white;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+    }
+
+    .button:hover,
+    .button:focus {
+      background: #352744;
       text-decoration: underline;
     }
 
-    .box {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    footer {
+      padding: 36px 20px;
+      border-top: 1px solid #d9cfe5;
+      text-align: center;
+      background: #f1ecf7;
+      color: #665d70;
+      font-size: 0.92rem;
+    }
+
+    footer p {
+      margin: 7px 0;
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        min-height: 220px;
+      }
+
+      main {
+        width: min(100% - 24px, 960px);
+        padding-top: 30px;
+      }
+
+      .card img {
+        height: 300px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<div class="box">
+  <header class="hero">
+    <div>
+      <h1>SENGTOPIA</h1>
+      <p>A small archive of translated stories</p>
+    </div>
+  </header>
 
-<h1>📚 Sengtopia</h1>
+  <main>
 
-<p style="text-align:center;">
-Where Stories Come Alive
-</p>
+    <section class="intro">
+      <h2>Home</h2>
 
-<h2>Welcome</h2>
+      <p>
+        Welcome to Sengtopia, my personal novel translation archive.
+      </p>
 
-<p>
-Welcome to Sengtopia! This is my personal novel translation website.
-</p>
+      <p>
+        I translate Chinese novels as a hobby. These translations
+        are shared for readers who enjoy historical, romantic,
+        fantasy, and drama-adapted stories.
+      </p>
+    </section>
 
-<h2>Novels</h2>
+    <section>
+      <h2>Projects</h2>
 
-<ul>
-  <li>Coming Soon...</li>
-</ul>
+      <div class="projects">
 
-</div>
+        <article class="card">
+          <img
+            src="novel-cover-1.jpg"
+            alt="Cover of the first Sengtopia novel">
+
+          <div class="card-content">
+            <h3>First Novel Title</h3>
+
+            <div class="card-actions">
+              <span class="status">Coming Soon</span>
+
+              <a class="button" href="#">
+                Read Here →
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            src="novel-cover-2.jpg"
+            alt="Cover of the second Sengtopia novel">
+
+          <div class="card-content">
+            <h3>Second Novel Title</h3>
+
+            <div class="card-actions">
+              <span class="status">Coming Soon</span>
+
+              <a class="button" href="#">
+                Read Here →
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Questions, feedback, or spotted a typo?</p>
+
+    <p>Contact information coming soon.</p>
+
+    <p>
+      © 2026 Sengtopia. Unofficial fan translations
+      shared for hobby purposes only.
+    </p>
+
+    <p>
+      Please support the original authors and publishers.
+    </p>
+  </footer>
 
 </body>
 </html>
