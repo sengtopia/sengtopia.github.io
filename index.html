@@ -253,22 +253,24 @@
         0 11px 25px rgba(78, 42, 103, 0.12),
         inset 0 1px 0 rgba(255, 255, 255, 0.8);
     }
-.novel-cover {
-  display: block;
-  width: 200px;
-  height: 200px;
-  border-right: 1px solid var(--border-lavender);
-  object-fit: cover;
-  object-position: center;
-}
 
-.alternative-title {
-  margin: -2px 0 10px;
-  color: #765d83;
-  font-size: 0.92rem;
-  font-style: italic;
-  line-height: 1.35;
-}
+    .novel-cover {
+      display: block;
+      width: 200px;
+      height: 200px;
+      border-right: 1px solid var(--border-lavender);
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .alternative-title {
+      margin: -2px 0 10px;
+      color: #765d83;
+      font-size: 0.92rem;
+      font-style: italic;
+      line-height: 1.35;
+    }
+
     .cover-placeholder {
       position: relative;
       display: flex;
@@ -320,6 +322,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      min-width: 0;
       padding: 16px 22px;
     }
 
@@ -367,6 +370,7 @@
       color: #704b8b;
       font-size: 0.86rem;
       line-height: 1.3;
+      white-space: nowrap;
     }
 
     .read-button {
@@ -390,6 +394,7 @@
       transition:
         transform 0.15s ease,
         filter 0.15s ease;
+      white-space: nowrap;
     }
 
     .read-button:hover,
@@ -496,10 +501,7 @@
       body {
         font-size: 16px;
       }
-.novel-cover {
-  width: 130px;
-  height: 130px;
-}
+
       .site-nav {
         gap: 25px;
         min-height: 58px;
@@ -520,26 +522,60 @@
 
       .project-card {
         grid-template-columns: 130px 1fr;
-        min-height: 175px;
+        height: 150px;
+      }
+
+      .novel-cover,
+      .cover-placeholder {
+        width: 130px;
+        height: 150px;
+        min-height: 150px;
+      }
+
+      .novel-cover {
+        object-fit: cover;
       }
 
       .cover-placeholder {
-        min-height: 175px;
         font-size: 1rem;
       }
 
       .project-content {
-        padding: 18px 16px;
+        padding: 12px 14px;
       }
 
       .project-content h3 {
-        font-size: 1.12rem;
+        margin-bottom: 4px;
+        font-size: 1.08rem;
+        line-height: 1.15;
+      }
+
+      .alternative-title {
+        margin: 0 0 5px;
+        font-size: 0.84rem;
+        line-height: 1.2;
+      }
+
+      .small-ornament {
+        width: 92px;
+        margin-bottom: 7px;
+      }
+
+      .project-actions {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .status {
+        padding: 3px 10px;
+        font-size: 0.76rem;
       }
 
       .read-button {
-        min-width: 102px;
-        padding: 7px 12px;
-        font-size: 0.9rem;
+        min-width: 0;
+        padding: 6px 10px;
+        font-size: 0.8rem;
       }
 
       footer {
@@ -553,26 +589,60 @@
     }
 
     @media (max-width: 420px) {
-
-.novel-cover {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  display: block;
-}
-
       .site-nav {
         gap: 18px;
       }
 
-    .project-card {
-  grid-template-columns: 1fr;
-  align-items: start;
-}
+      .project-card {
+        grid-template-columns: 120px 1fr;
+        height: 140px;
+      }
+
+      .novel-cover,
       .cover-placeholder {
-        padding: 10px;
-        font-size: 0.9rem;
+        width: 120px;
+        height: 140px;
+        min-height: 140px;
+      }
+
+      .project-content {
+        padding: 9px 10px;
+      }
+
+      .project-content h3 {
+        font-size: 1rem;
+      }
+
+      .alternative-title {
+        font-size: 0.78rem;
+      }
+
+      .small-ornament {
+        width: 78px;
+        margin-bottom: 5px;
+      }
+
+      .small-ornament span {
+        padding: 0 5px;
+      }
+
+      .project-actions {
+        gap: 6px;
+      }
+
+      .status {
+        padding: 3px 8px;
+        font-size: 0.7rem;
+      }
+
+      .read-button {
+        padding: 5px 8px;
+        font-size: 0.74rem;
+      }
+
+      .cover-placeholder {
+        padding: 8px;
+        font-size: 0.84rem;
       }
     }
   </style>
@@ -620,32 +690,32 @@
       <div class="projects-grid">
 
         <article class="project-card">
-  <img
-    class="novel-cover"
-    src="jiaguojiu.png"
-    alt="Cover of Jia Guo Jiu — Marrying the Imperial Uncle"
-  >
+          <img
+            class="novel-cover"
+            src="jiaguojiu.png"
+            alt="Cover of Jia Guo Jiu — Marrying the Imperial Uncle"
+          >
 
-  <div class="project-content">
-    <h3>Jia Guo Jiu</h3>
+          <div class="project-content">
+            <h3>Jia Guo Jiu</h3>
 
-    <p class="alternative-title">
-      Marrying the Imperial Uncle
-    </p>
+            <p class="alternative-title">
+              Marrying the Imperial Uncle
+            </p>
 
-    <div class="small-ornament">
-      <span>✦</span>
-    </div>
+            <div class="small-ornament">
+              <span>✦</span>
+            </div>
 
-    <div class="project-actions">
-      <span class="status">Ongoing</span>
+            <div class="project-actions">
+              <span class="status">Ongoing</span>
 
-      <a class="read-button" href="jiaguojiu.html">
-        Read Here →
-      </a>
-    </div>
-  </div>
-</article>
+              <a class="read-button" href="jiaguojiu.html">
+                Read Here →
+              </a>
+            </div>
+          </div>
+        </article>
 
         <article class="project-card">
           <div
