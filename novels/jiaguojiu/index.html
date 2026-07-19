@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Marrying the Imperial Uncle | Sengtopia</title>
+  <meta name="description" content="Read Marrying the Imperial Uncle (嫁国舅) by Xiao Jia Ren on Sengtopia.">
+
+  <style>
+    :root {
+      --purple: #6f4a8e;
+      --purple-dark: #4f3269;
+      --purple-light: #eee5f5;
+      --background: #faf8fc;
+      --card: #ffffff;
+      --text: #29232f;
+      --muted: #716a77;
+      --border: #e5ddea;
+      --shadow: 0 8px 25px rgba(65, 42, 80, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .site-header {
+      background: linear-gradient(135deg, var(--purple-dark), var(--purple));
+      color: white;
+      padding: 18px 20px;
+      box-shadow: 0 3px 15px rgba(45, 25, 58, 0.18);
+    }
+
+    .header-inner {
+      width: min(1100px, 100%);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .site-name {
+      margin: 0;
+      font-size: 1.65rem;
+      letter-spacing: 0.4px;
+    }
+
+    .home-link {
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 8px 13px;
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      border-radius: 999px;
+    }
+
+    .home-link:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    main {
+      width: min(1100px, calc(100% - 32px));
+      margin: 34px auto 60px;
+    }
+
+    .novel-card,
+    .section-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .novel-card {
+      padding: 28px;
+    }
+
+    .novel-top {
+      display: grid;
+      grid-template-columns: minmax(240px, 320px) 1fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .cover-wrap {
+      width: 100%;
+    }
+
+    .novel-cover {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      box-shadow: 0 9px 24px rgba(48, 31, 59, 0.17);
+      background: var(--purple-light);
+    }
+
+    .novel-info {
+      min-width: 0;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-bottom: 18px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      background: var(--purple-light);
+      color: var(--purple-dark);
+      border: 1px solid #d7c5e5;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .novel-title {
+      margin: 0;
+      color: var(--purple-dark);
+      font-size: clamp(2rem, 5vw, 3.3rem);
+      line-height: 1.14;
+    }
+
+    .romanized-title {
+      margin: 9px 0 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .chinese-title {
+      margin: 7px 0 0;
+      font-size: 1.55rem;
+      font-weight: 700;
+    }
+
+    .author {
+      margin: 8px 0 22px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .details {
+      margin: 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .detail-row {
+      display: grid;
+      grid-template-columns: 115px 1fr;
+      gap: 16px;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .detail-row dt {
+      font-weight: 700;
+      color: var(--purple-dark);
+    }
+
+    .detail-row dd {
+      margin: 0;
+    }
+
+    .status-badge {
+      display: inline-block;
+      background: #e8f5ea;
+      color: #256335;
+      border: 1px solid #c5e3ca;
+      border-radius: 999px;
+      padding: 2px 10px;
+      font-weight: 700;
+    }
+
+    .synopsis {
+      margin-top: 32px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+    }
+
+    .section-title {
+      margin: 0 0 18px;
+      color: var(--purple-dark);
+      font-size: 1.75rem;
+      line-height: 1.2;
+    }
+
+    .synopsis p {
+      margin: 0 0 16px;
+      font-size: 1.04rem;
+    }
+
+    .dialogue {
+      margin-left: 18px;
+      padding-left: 16px;
+      border-left: 4px solid #d9c5e8;
+      font-style: italic;
+    }
+
+    .toc-section {
+      margin-top: 32px;
+    }
+
+    .section-card {
+      overflow: hidden;
+    }
+
+    .section-heading {
+      margin: 0;
+      padding: 20px 24px;
+      background: #f2edf6;
+      color: var(--purple-dark);
+      border-bottom: 1px solid var(--border);
+      font-size: 1.2rem;
+    }
+
+    .chapter-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .chapter-list li + li {
+      border-top: 1px solid var(--border);
+    }
+
+    .chapter-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 17px 24px;
+      text-decoration: none;
+      transition: background 0.18s ease;
+    }
+
+    .chapter-link:hover {
+      background: #faf7fc;
+    }
+
+    .chapter-name {
+      font-weight: 700;
+    }
+
+    .read-text {
+      flex-shrink: 0;
+      color: var(--purple);
+      font-weight: 700;
+    }
+
+    .coming-soon {
+      padding: 24px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .site-footer {
+      padding: 24px 16px 38px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 720px) {
+      .site-header {
+        padding: 14px 16px;
+      }
+
+      .site-name {
+        font-size: 1.35rem;
+      }
+
+      .home-link {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+      }
+
+      main {
+        width: min(100% - 22px, 600px);
+        margin-top: 20px;
+      }
+
+      .novel-card {
+        padding: 16px;
+        border-radius: 15px;
+      }
+
+      .novel-top {
+        display: block;
+      }
+
+      .cover-wrap {
+        width: 100%;
+        max-width: 430px;
+        margin: 0 auto 24px;
+      }
+
+      .novel-title {
+        font-size: 2.15rem;
+      }
+
+      .chinese-title {
+        font-size: 1.35rem;
+      }
+
+      .detail-row {
+        grid-template-columns: 96px 1fr;
+        gap: 10px;
+      }
+
+      .synopsis {
+        margin-top: 26px;
+        padding-top: 24px;
+      }
+
+      .section-title {
+        font-size: 1.55rem;
+      }
+
+      .chapter-link {
+        padding: 16px 18px;
+      }
+
+      .section-heading {
+        padding: 17px 18px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .header-inner {
+        gap: 10px;
+      }
+
+      .site-name {
+        font-size: 1.2rem;
+      }
+
+      .novel-title {
+        font-size: 1.85rem;
+      }
+
+      .romanized-title,
+      .author,
+      .synopsis p {
+        font-size: 0.98rem;
+      }
+
+      .tag {
+        font-size: 0.82rem;
+        padding: 4px 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="site-name">Sengtopia</h1>
+      <a class="home-link" href="../../index.html">← Back to Home</a>
+    </div>
+  </header>
+
+  <main>
+    <article class="novel-card">
+      <div class="novel-top">
+        <div class="cover-wrap">
+          <!-- Upload your cover to images/jiaguojiu-cover.jpg -->
+          <img
+            class="novel-cover"
+            src="../../images/jiaguojiu-cover.jpg"
+            alt="Marrying the Imperial Uncle novel cover">
+        </div>
+
+        <section class="novel-info">
+          <div class="tags" aria-label="Genres">
+            <span class="tag">Historical</span>
+            <span class="tag">Romance</span>
+            <span class="tag">Palace Intrigue</span>
+          </div>
+
+          <h2 class="novel-title">Marrying the Imperial Uncle</h2>
+          <p class="romanized-title">Jià Guó Jiù</p>
+          <p class="chinese-title" lang="zh">嫁国舅</p>
+          <p class="author">by Xiao Jia Ren (笑佳人)</p>
+
+          <dl class="details">
+            <div class="detail-row">
+              <dt>Status</dt>
+              <dd><span class="status-badge">Complete</span></dd>
+            </div>
+
+            <div class="detail-row">
+              <dt>Length</dt>
+              <dd>95 Chapters + 9 Extras</dd>
+            </div>
+          </dl>
+        </section>
+      </div>
+
+      <section class="synopsis">
+        <h2 class="section-title">Synopsis</h2>
+
+        <p>
+          Li Yunzhu was a recognized beauty among the nobility, spoiled and
+          willful, unable to tolerate the slightest grievance.
+        </p>
+
+        <p>
+          The young imperial uncle, Cao Shao, dreamed of marrying her, but
+          unfortunately, his elders changed their minds.
+        </p>
+
+        <p class="dialogue">
+          “Yunzhu, it’s my incompetence that has wronged you.”
+          <br>
+          “Oh.”
+        </p>
+
+        <p>
+          Li Yunzhu didn’t have much affection for Cao Shao, but she couldn’t
+          swallow this insult.
+        </p>
+
+        <p>
+          At this time, the eldest imperial uncle, Cao Xun, returned to the
+          capital. He had said in his youth, “I won’t settle down until I’ve
+          secured the borders.”
+        </p>
+
+        <p>
+          Now, the eldest imperial uncle, at thirty, had achieved great success,
+          imposing and majestic.
+        </p>
+
+        <p class="dialogue"><strong>Li Yunzhu: “Fine, I’ll marry him!”</strong></p>
+      </section>
+    </article>
+
+    <section class="toc-section" id="chapters">
+      <h2 class="section-title">Table of Contents</h2>
+
+      <div class="section-card">
+        <h3 class="section-heading">Chapters</h3>
+
+        <!--
+          When Chapter 1 is ready, delete the "coming-soon" paragraph below
+          and replace it with the chapter list example.
+
+          Example:
+
+          <ul class="chapter-list">
+            <li>
+              <a class="chapter-link" href="chapter-001.html">
+                <span class="chapter-name">Chapter 1</span>
+                <span class="read-text">Read</span>
+              </a>
+            </li>
+          </ul>
+        -->
+
+        <p class="coming-soon">Chapters coming soon.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    © 2026 Sengtopia
+  </footer>
+</body>
+</html>
